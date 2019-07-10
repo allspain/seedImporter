@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import todos from './todos';
+import seeding from './seeding';
 
 export default combineReducers({
-  todos
+  seeding
 });

@@ -7,5 +7,8 @@ module.exports = {
   },
   module: {
     loaders: config.module.rules.slice(1)  // remove babel-loader
+  },
+  node: {
+    fs: 'empty'
   }
 };

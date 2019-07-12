@@ -8,7 +8,7 @@ const FileImporter = (props) => {
   let fileReader;
 
   const onFileDone = (jsonArr) => {
-
+    props.addFile(jsonArr);
   };
 
   const handleFileRead = () => {

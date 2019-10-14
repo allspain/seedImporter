@@ -12,14 +12,31 @@ const actionsMap = {
     }, ...state];
   },
   [ActionTypes.DELETE_FILE](state, action) {
-    return state.filter(todo =>
-      todo.id !== action.id
+    return state.filter(file =>
+      file.id !== action.id
     );
   },
   [ActionTypes.GET_FILE_INFO](state, action) {
     const { id } = action;
     return state;
   },
+  [ActionTypes.GET_FILE_INFO_REQUEST_SUCCESS](state, action) {
+    const { id, tournament, event, phase } = action;
+    // find the file and then update the file
+    const fetchedTitle = `${tournament.name} - ${event.name} - ${phase.name}`;
+    return state.map(file =>
+      (file.id === id ?
+        Object.assign({}, file,
+          {
+            title: file.title ? file.title : fetchedTitle,
+            fetchedTitle,
+            tournament,
+            event,
+            phase,
+          }) :
+        file)
+      );
+  }
 };
 
 export default function seeding(state = initialState, action) {

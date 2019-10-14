@@ -1,6 +1,10 @@
 import * as ActionTypes from '../constants/ActionTypes';
 
-const initialState = [];
+const initialState = {
+  isImporting: false,
+  importId: null,
+  items: []
+};
 
 const actionsMap = {
 };
@@ -10,4 +14,3 @@ export default function importing(state = initialState, action) {
   if (!reduceFn) return state;
   return reduceFn(state, action);
 }
-xw;

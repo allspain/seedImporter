@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { csv } from 'csvtojson';
 
-import * as actionCreators from '../actions/seeding';
+import * as fileActions from '../actions/files';
 
 const FileImporter = (props) => {
   let fileReader;
@@ -47,4 +47,4 @@ const FileImporter = (props) => {
   );
 };
 
-export default connect(null, actionCreators)(FileImporter);
+export default connect(null, fileActions)(FileImporter);

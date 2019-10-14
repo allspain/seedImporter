@@ -2,15 +2,15 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Home from '../components/Home';
-import * as SeedingActions from '../actions/seeding';
+import * as FileActions from '../actions/files';
 import style from './App.css';
 
 @connect(
   state => ({
-    seeding: state.seeding
+    files: state.files
   }),
   dispatch => ({
-    actions: bindActionCreators(SeedingActions, dispatch)
+    actions: bindActionCreators(FileActions, dispatch)
   })
 )
 export default class App extends Component {
@@ -21,7 +21,7 @@ export default class App extends Component {
   };
 
   render() {
-    const { seeding, actions } = this.props;
+    const { files, actions } = this.props;
 
     return (
       <div className={style.normal}>

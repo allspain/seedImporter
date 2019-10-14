@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import seeding from './seeding';
+import files from './files';
 import importing from './importing';
 
 export default combineReducers({
-  seeding,
+  files,
   importing
 });

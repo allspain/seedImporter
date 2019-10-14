@@ -1,0 +1,32 @@
+.fileListItem {
+    padding: 10px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.fileListItemHeader {
+    display: flex;
+}
+
+.fileListItemHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.fileListItemHeaderTitle {
+    font-weight: bold;
+    max-width: 350px;
+}
+
+.fileListItemFooter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;  
+}
+
+.fileListItemFooterActions {
+    display: flex;
+}
+.fileListItemFooterActions * {
+    margin-left: 10px;
+}
